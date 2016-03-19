@@ -6,7 +6,7 @@ import isolate from '@cycle/isolate';
 var app = require('./src/app').default;
 
 const drivers = {
-  DOM: restartable(makeDOMDriver('.app'), {pauseSinksWhileReplaying: false}),
+  DOM: restartable(makeDOMDriver('.app'), {pauseSinksWhileReplaying: false})
 };
 
 const {sinks, sources} = run(app, drivers);
